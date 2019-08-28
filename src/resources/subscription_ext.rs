@@ -6,12 +6,12 @@ use serde_derive::Serialize;
 #[derive(Clone, Debug, Serialize)]
 pub struct CancelSubscription {
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub at_period_end: Option<bool>,
+    pub cancel_at_period_end: Option<bool>,
 }
 
 impl CancelSubscription {
     pub fn new() -> CancelSubscription {
-        CancelSubscription { at_period_end: None }
+        CancelSubscription { cancel_at_period_end: None }
     }
 }
 
